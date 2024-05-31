@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Edu+TAS+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color: #000;
+    --second-bg-color: #121212;
+    --text-color: #fff;
+    --main-color: #0e98d7;
+    --header-border-color: #ffffff1c;
+    --btn-hover: ;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--second-bg-color); 
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    border: 2px solid var(--second-bg-color); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    height: 100vh;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-size: var(--base-font-size);
+}
+
+a{
+    color: var(--text-color);
+}
+
+span{
+    color: var(--main-color);
+}
+
+.navbar {
+    background-color: transparent;
+    overflow: hidden;
+    border-bottom: 1px solid var(--header-border-color);
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    float: left;
+    color: var(--text-color);
+    padding: 14px 20px;
+    font-size: 2rem;
+    transition: .4s ease-in-out;
+    font-weight: 900;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.1);
+}
+
+.navbar-menu {
+    float: right;
+}
+
+.navbar-menu li {
+    float: left;
+}
+
+.navbar-menu a {
+    display: block;
+    padding: 14px 20px;
+    text-align: center;
+    transition: .24s ease-in-out;
+    font-size: 1.35rem;
+}
+
+.navbar-menu a:hover{
+    background-color: var(--second-bg-color);
+    color: var(--main-color);
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.datalist{
+    padding-left: 65px;
+    width: 30%;
+}
+
+.datalist h2{
+    font-size: 3rem;
+}
+
+.datalist h2 span{
+    font-size: 3rem;
+}
+
+.datalist h3{
+    font-size: 2rem;
+}
+
+@keyframes changeText {
+    0% { content: "Programmer"; }
+    33.33% { content: "Developer"; }
+    66.66% { content: "Student"; }
+    100% { content: "Programmer"; }
+}
+
+.datalist h3 span::after {
+    content: "Programmer";
+    display: inline-block;
+    animation: changeText 7s infinite; /* Adjust the duration as needed */
+}
+
+.detail{
+    font-size: 1.3rem;
+    padding-top: 10px;
+}
+
+.photo img {
+   position: relative;
+    left: -1rem;
+    width: 32vw;
+    height: 32vw;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    transition: .4s ease-in-out;
+}
+
+.photo img:hover{
+    transform: scale(1.03);
+}
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 20px;
+}
+
+.social-icons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    transform: scale(1.1)translateY(-5px);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.btn{
+    display: flex;
+    gap: 1rem;
+    margin-left: -40px;
+}
+
+.btn a{
+    background-color: var(--main-color);
+    padding: 10px 40px 10px 40px;
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    transition: .4s ease-in-out;
+    font-weight: 700;
+}
+
+.btn a:last-child{
+    background-color: var(--bg-color);
+}
+
+.btn a:first-child{
+    color: var(--bg-color);
+}
+
+.btn a:last-child:hover{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+.btn a:first-child:hover{
+    background-color: var(--bg-color);
+    border-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.btn a:hover{
+    transform: scale(1.03)translateY(-5px);
+}
+.about {
+    background-color: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    padding: 2rem;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    transition: .4s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.about-btn {
+    display: inline-block;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: var(--bg-color);
+    font-weight: 700;
+    transition: .4s ease-in-out;
+    text-decoration: none;
+}
+
+.about-btn:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+}
+
+.services {
+    background-color: var(--bg-color);
+    padding: 4rem 0;
+    color: var(--text-color);
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px; /* Add padding to avoid content sticking to the edges */
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-box {
+    flex: 1 1 calc(33.33% - 2rem);
+    padding: 2rem;
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+    transition: .4s ease-in-out;
+    text-align: center;
+    margin-bottom: 2rem; /* Add margin to create space between service boxes */
+}
+
+/* Adjust service box width for smaller screens */
+@media (max-width: 768px) {
+    .service-box {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+/* Adjust service box width for even smaller screens */
+@media (max-width: 576px) {
+    .service-box {
+        flex: 1 1 calc(100% - 2rem);
+    }
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+.service-box i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.projects {
+    background-color: var(--second-bg-color);
+    padding: 4rem 0;
+    padding-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    flex: 1 1 calc(33.33% - 2rem);
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: .4s ease-in-out;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+     /* Add margin to create space between project cards */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    transition: .4s ease-in-out;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: .4s ease-in-out;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.modal-content .project-link {
+    font-size: 1.2rem;
+}
+
+.close {
+    color: var(--main-color);
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--text-color);
+}
+
+.contact {
+    background-color: var(--bg-color);
+    padding: 4rem 0;
+    color: var(--text-color);
+}
+
+.contact h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.inp {
+    display: flex;
+    flex-direction: column; /* Change to column layout on smaller screens */
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sec1 input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+}
+
+.sec2 button {
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.sec2 button:hover {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.sec2 textarea {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--bg-color-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
+}
+.sec2 textarea, .sec2 button{
+    position: relative;
+    top: -55px;
+}
+/* Adjust input fields for smaller screens */
+@media (max-width: 768px) {
+    .sec1 input,
+    .sec2 textarea,
+    .sec2 button {
+        width: calc(100% - 2rem);
+    }
+}
