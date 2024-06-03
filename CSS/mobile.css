@@ -125,6 +125,20 @@
     .inp input, .inp button, .inp textarea{
         margin-left: 4%;
     }
+    .sec1 input,
+    .sec2 textarea,
+    .sec2 button {
+        width: calc(100% - 2rem);
+    }
+
+    footer .social-link {
+        flex-wrap: wrap;
+      }
+      
+      footer .social-link a {
+        flex: 1 0 45%; /* Two links per row */
+      }
+    
 }
 
 @media (max-width: 576px) {
@@ -141,3 +155,8 @@
         display: none;
     }
 }
+@media (max-width: 480px) {
+    footer .social-link a {
+      flex: 1 0 100%; /* One link per row */
+    }
+  }

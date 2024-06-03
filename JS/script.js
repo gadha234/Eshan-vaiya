@@ -86,3 +86,21 @@ window.addEventListener("blur", () =>{
 window.addEventListener("focus", () =>{
     document.title = docTitle;
 })
+
+// Function to open the FAQ popup
+function openPopup() {
+    var popup = document.getElementById("faq-popup");
+    popup.style.display = "block";
+}
+
+// Function to close the FAQ popup
+function closePopup() {
+    var popup = document.getElementById("faq-popup");
+    popup.style.display = "none";
+}
+
+// Event listener to open the FAQ popup when clicking on the #faq link
+document.getElementById("faq-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default behavior of the link
+    openPopup();
+});

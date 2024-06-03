@@ -12,9 +12,7 @@
     <header>
         <nav class="navbar">
             <div class="navbar-brand"><a href="#">Es<span>ha</span>n</a></div>
-            <div class="navbar-toggle" id="navbar-toggle">
-                &#9776;
-            </div>
+            <div class="navbar-toggle" id="navbar-toggle" style="cursor: pointer;">&#9776;</div>
             <ul class="navbar-menu" id="navbar-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -23,26 +21,28 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>      
+    </header>
+
     <section class="home" id="home">
         <div class="mobile"><img src="./asset/image/eshan.png" alt="Eshan Vaiya"></div>
         <div class="datalist">
-            <h2>Hi, It's <br><span>Eshan</span> .</h2>
+            <h2>Hi, It's <br><span>Eshan</span>.</h2>
             <h3>I'm a <span></span></h3>
             <p class="detail">frontend web developer specializing in creating visually appealing, user-friendly interfaces. Proficient in HTML, CSS, and JavaScript, I transform design concepts into responsive, interactive websites that provide seamless user experiences across all devices. Passionate about coding and innovation.</p>
             <div class="social-icons">
                 <i class='bx bxl-facebook-circle'></i>
-                <i class='bx bxl-messenger' ></i>
-                <i class='bx bxl-telegram' ></i>
-                <i class='bx bxl-tiktok' ></i>
+                <i class='bx bxl-messenger'></i>
+                <i class='bx bxl-telegram'></i>
+                <i class='bx bxl-tiktok'></i>
             </div>
         </div>
         <div class="btn">
             <a href="#hire">Hire</a>
             <a href="#contact">Contact</a>
         </div>
-        <div class="photo"><img src="./asset/image/eshan.png" alt="Eshan Vaiya"></div>      
-    </section>    
+        <div class="photo"><img src="./asset/image/eshan.png" alt="Eshan Vaiya"></div>
+    </section>
+
     <section class="about" id="about">
         <div class="about-container">
             <div class="about-image">
@@ -54,7 +54,7 @@
                 <a href="#contact" class="about-btn">Let's Connect</a>
             </div>
         </div>
-    </section> 
+    </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -122,23 +122,46 @@
             </div>
         </div>
     </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
-       <h2>Contact Me</h2>
-       <div class="inp">
-       <div class="sec1">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="text" name="number" placeholder="Phone Number" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-       </div>
-       <div class="sec2">
-        <textarea name="Your Message" placeholder="Your Message" rows="8"></textarea>
-        <button>Contact Me</button>
-       </div>
-    </div>
+        <h2>Contact Me</h2>
+        <div class="inp">
+            <div class="sec1">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="number" placeholder="Phone Number" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="sec2">
+                <textarea name="message" placeholder="Your Message" rows="8"></textarea>
+                <button>Contact Me</button>
+            </div>
+        </div>
     </section>
-    
+
+    <footer>
+        <h2>Es<span>ha</span>n</h2>
+        <div class="social-link">
+            <div class="l1">
+                <a href="">Hablu-Programmer</a>
+                <a href="">Hablu-Programmer</a>
+                <a href="">Learn With Tutul</a>
+            </div>
+            <div class="l2">
+                <a href="">Git Hub</a>
+                <a href="">Facebook</a>
+                <a href="">LinkedIn</a>
+            </div>
+            <div class="l3">
+                <a href="#about">About Me</a>
+                <a href="#faq" id="faq-link">FAQ</a>
+                <a href="#home">Go Back</a>
+            </div>
+        </div>
+        <p><span>&copy;</span>2024 Hablu<span>-</span>Programmer</p>
+    </footer>
+
     <!-- Modal for Project Details -->
     <div id="projectModal" class="modal">
         <div class="modal-content">
@@ -147,6 +170,20 @@
             <h3 id="modalTitle">Project Title</h3>
             <p id="modalDescription">Project Description</p>
             <a id="modalLink" href="#" class="project-link">View Project</a>
+        </div>
+    </div>
+
+    <div class="popup" id="faq-popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&#10007;</span>
+            <h2>Frequently <span>Asked</span> Questions.</h2>
+            <p>Here are some common questions and their answers.</p>
+            <ul>
+                <li>Question 1: What is a frontend web developer?</li>
+                <li>Answer: This question clarifies the role and responsibilities of a frontend developer, focusing on their expertise in building the user interface and experience of a website or web application.</li>
+                <li>Question 2: What programming languages and technologies do frontend developers use?</li>
+                <li>Answer: This question addresses the common tools and technologies that frontend developers utilize, such as HTML, CSS, and JavaScript, along with frameworks like React, Angular, or Vue.js.</li>
+            </ul>
         </div>
     </div>
 
